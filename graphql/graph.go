@@ -1,36 +1,27 @@
 package main
 
-import "github.com/99designs/gqlgen/graphql"
+import (
+	"github.com/99designs/gqlgen/graphql"
+	"github.com/mefourr/go-grpc-graphql-microservice/account"
+	"github.com/mefourr/go-grpc-graphql-microservice/catalog"
+	"github.com/mefourr/go-grpc-graphql-microservice/order"
+)
 
 type Server struct {
-	// accountClient *account.CLient
-	// catalogClient *catalog.Client
-	// orderClient *order.Client
+	accountClient *account.Client
+	catalogClient *catalog.Client
+	orderClient   *order.Client
 }
 
 func NewGraphQlServer(accountUrl, catalogUrl, orderUrl string) (*Server, error) {
-	// accountClient, err := account.NewClient(accountUrl)
-	// if err != nil {
-	// 	return nil, err
-	// }
-	
-	// catalogClient, err := catalog.NewClient(catalogUrl)
-	// if err != nil {
-	// 	accountClient.Close()
-	// 	return nil, err
-	// }
-
-	// orderClient, err := order.NewClient(orderUrl)
-	// if err != nil {
-	// 	accountClient.Close()
-	// 	catalogClient.Close()
-	// 	return nil, err
-	// }
+	accountClient := account.NewClient(accountUrl)
+	catalogClient := catalog.NewClient(catalogUrl)
+	orderClient := order.NewClient(orderUrl)
 
 	return &Server{
-		// accountClient,
-		// catalogClient,
-		// orderClient,
+		accountClient,
+		catalogClient,
+		orderClient,
 	}, nil
 }
 
@@ -57,4 +48,3 @@ func (s *Server) ToExecutableSchema() graphql.ExecutableSchema {
 		Config{Resolvers: s},
 	)
 }
-
