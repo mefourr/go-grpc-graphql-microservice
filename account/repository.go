@@ -13,11 +13,11 @@ type Repository interface {
 	ListAccounts(ctx context.Context, skip uint64, take uint64) ([]Account, error)
 }
 
-type postgresRepository struct {
+type PostgresRepository struct {
 	db *sql.DB
 }
 
-func (r *postgresRepository) Close() error {
+func (r *PostgresRepository) Close() error {
 	err := r.db.Close()
 	if err != nil {
 		return err
@@ -25,7 +25,7 @@ func (r *postgresRepository) Close() error {
 	return nil
 }
 
-func (r *postgresRepository) Ping() error {
+func (r *PostgresRepository) Ping() error {
 	err := r.db.Ping()
 	if err != nil {
 		return err
@@ -33,7 +33,7 @@ func (r *postgresRepository) Ping() error {
 	return nil
 }
 
-func (r *postgresRepository) PutAccount(ctx context.Context, a Account) error {
+func (r *PostgresRepository) PutAccount(ctx context.Context, a Account) error {
 	_, err := r.db.ExecContext(
 		ctx,
 		"INSERT INTO account(id, name) VALUES($1, $2)",
@@ -43,7 +43,7 @@ func (r *postgresRepository) PutAccount(ctx context.Context, a Account) error {
 	return err
 }
 
-func (r *postgresRepository) GetAccountById(ctx context.Context, id string) (*Account, error) {
+func (r *PostgresRepository) GetAccountById(ctx context.Context, id string) (*Account, error) {
 	row := r.db.QueryRowContext(
 		ctx,
 		"SELECT a.id, a.name FROM accounts a WHERE a.id = $1",
@@ -57,7 +57,7 @@ func (r *postgresRepository) GetAccountById(ctx context.Context, id string) (*Ac
 
 	return a, nil
 }
-func (r *postgresRepository) ListAccounts(ctx context.Context, skip uint64, take uint64) ([]Account, error) {
+func (r *PostgresRepository) ListAccounts(ctx context.Context, skip uint64, take uint64) ([]Account, error) {
 	rows, err := r.db.QueryContext(
 		ctx,
 		"SELECT a.id, a.name FROM accounts a ORDER BY DESC OFFSET $1 LIMIT $2",
@@ -85,7 +85,7 @@ func (r *postgresRepository) ListAccounts(ctx context.Context, skip uint64, take
 	return accounts, nil
 }
 
-func NewPostgresRepository(url string) (Repository, error) {
+func NewPostgresRepository(url string) (*PostgresRepository, error) {
 	db, err := sql.Open("postgres", url)
 	if err != nil {
 		return nil, err
@@ -96,5 +96,5 @@ func NewPostgresRepository(url string) (Repository, error) {
 		return nil, err
 	}
 
-	return &postgresRepository{db: db}, nil
+	return &PostgresRepository{db: db}, nil
 }

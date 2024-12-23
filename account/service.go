@@ -16,15 +16,15 @@ type Account struct {
 	Name string `json:"name"`
 }
 
-type AccountService struct {
+type accountService struct {
 	repository Repository
 }
 
-func NewService(repository Repository) *AccountService {
-	return &AccountService{repository: repository}
+func NewService(repository Repository) Service {
+	return &accountService{repository: repository}
 }
 
-func (a AccountService) PostAccount(ctx context.Context, name string) (*Account, error) {
+func (a accountService) PostAccount(ctx context.Context, name string) (*Account, error) {
 	account := &Account{
 		ID:   ksuid.New().String(),
 		Name: name,
@@ -36,11 +36,11 @@ func (a AccountService) PostAccount(ctx context.Context, name string) (*Account,
 	return account, nil
 }
 
-func (a AccountService) GetAccount(ctx context.Context, id string) (*Account, error) {
+func (a accountService) GetAccount(ctx context.Context, id string) (*Account, error) {
 	return a.repository.GetAccountById(ctx, id)
 }
 
-func (a AccountService) GetAccounts(ctx context.Context, skip, take uint64) ([]Account, error) {
+func (a accountService) GetAccounts(ctx context.Context, skip, take uint64) ([]Account, error) {
 	if take > 100 || (skip <= 0 && take <= 0) {
 		take = 100
 	}

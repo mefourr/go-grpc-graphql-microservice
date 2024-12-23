@@ -8,15 +8,17 @@ require (
 	github.com/99designs/gqlgen v0.17.57
 	github.com/lib/pq v1.10.9
 	github.com/segmentio/ksuid v1.0.4
+	github.com/tinrab/retry v1.0.0
 	github.com/vektah/gqlparser/v2 v2.5.20
 	google.golang.org/grpc v1.68.1
 	google.golang.org/protobuf v1.35.2
+	gopkg.in/olivere/elastic.v5 v5.0.86
 )
 
 require (
-	github.com/avast/retry-go v3.0.0+incompatible // indirect
 	github.com/gorilla/websocket v1.5.0 // indirect
-	github.com/tinrab/retry v1.0.0 // indirect
+	github.com/mailru/easyjson v0.7.1 // indirect
+	github.com/pkg/errors v0.9.1 // indirect
 	golang.org/x/net v0.32.0 // indirect
 	golang.org/x/sys v0.28.0 // indirect
 	golang.org/x/text v0.21.0 // indirect
