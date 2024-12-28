@@ -12,13 +12,13 @@ type Client struct {
 	service pb.AccountServiceClient
 }
 
-func NewClient(url string) *Client {
+func NewClient(url string) (*Client, error) {
 	client, err := grpc.NewClient(url, grpc.WithTransportCredentials(credentials.NewClientTLSFromCert(nil, "")))
 	if err != nil {
-		return nil
+		return nil, err
 	}
 	serviceClient := pb.NewAccountServiceClient(client)
-	return &Client{conn: client, service: serviceClient}
+	return &Client{conn: client, service: serviceClient}, nil
 }
 
 func (c *Client) Close() {

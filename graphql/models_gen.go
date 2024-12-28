@@ -20,12 +20,12 @@ type Order struct {
 	Products   []*OrderedProduct `json:"products"`
 }
 
-type OrderIntput struct {
-	AccountID string                `json:"accountId"`
-	Products  []*OrderProductIntput `json:"products"`
+type OrderInput struct {
+	AccountID string               `json:"accountId"`
+	Products  []*OrderProductInput `json:"products"`
 }
 
-type OrderProductIntput struct {
+type OrderProductInput struct {
 	ID       string `json:"id"`
 	Quantity int    `json:"quantity"`
 }
@@ -50,7 +50,7 @@ type Product struct {
 	Price       float64 `json:"price"`
 }
 
-type ProductIntput struct {
+type ProductInput struct {
 	Name        string  `json:"name"`
 	Description string  `json:"description"`
 	Price       float64 `json:"price"`

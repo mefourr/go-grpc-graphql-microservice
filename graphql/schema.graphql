@@ -37,26 +37,26 @@ input AccountInput {
     name: String!
 }
 
-input ProductIntput {
+input ProductInput {
     name: String!
     description: String!
     price: Float!
 }
 
-input OrderProductIntput {
+input OrderProductInput {
     id: String!
     quantity: Int!
 }
 
-input OrderIntput {
+input OrderInput {
     accountId: String!
-    products: [OrderProductIntput!]!
+    products: [OrderProductInput!]!
 }
 
 type Mutation {
     createAccount(account: AccountInput!): Account
-    createProduct(product: ProductIntput!): Product
-    createOrder(order: OrderIntput!): Order
+    createProduct(product: ProductInput!): Product
+    createOrder(order: OrderInput!): Order
 }
 
 type Query {

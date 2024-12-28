@@ -14,9 +14,9 @@ type Server struct {
 }
 
 func NewGraphQlServer(accountUrl, catalogUrl, orderUrl string) (*Server, error) {
-	accountClient := account.NewClient(accountUrl)
-	catalogClient := catalog.NewClient(catalogUrl)
-	orderClient := order.NewClient(orderUrl)
+	accountClient, _ := account.NewClient(accountUrl)
+	catalogClient, _ := catalog.NewClient(catalogUrl)
+	orderClient, _ := order.NewClient(orderUrl)
 
 	return &Server{
 		accountClient,

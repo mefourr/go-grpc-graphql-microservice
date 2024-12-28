@@ -9,9 +9,7 @@ import (
 )
 
 type Config struct {
-	DataBaseURL      string `config:"DATA_BASE_URL"`
-	DataBaseUsername string `config:"DATA_BASE_USERNAME"`
-	DataBasePassword string `config:"DATA_BASE_PASSWORD"`
+	DataBaseURL string `config:"DATABASE_URL"`
 }
 
 func main() {

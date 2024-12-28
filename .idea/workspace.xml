@@ -4,8 +4,37 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a683dff9-f4ce-493f-ba5f-6aedca08aefb" name="Changes" comment="account services">
+    <list default="true" id="a683dff9-f4ce-493f-ba5f-6aedca08aefb" name="Changes" comment="catalog protos">
+      <change afterPath="$PROJECT_DIR$/order/db.dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order/order.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order/up.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/app.dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/account/app.dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/account/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/cmd/account/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/account/cmd/account/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/account/service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/app.dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/app.dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/cmd/catalog/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/cmd/catalog/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphql/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/graphql/app.dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphql/accout_resolver.go" beforeDir="false" afterPath="$PROJECT_DIR$/graphql/accout_resolver.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphql/generated.go" beforeDir="false" afterPath="$PROJECT_DIR$/graphql/generated.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphql/graph.go" beforeDir="false" afterPath="$PROJECT_DIR$/graphql/graph.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphql/models_gen.go" beforeDir="false" afterPath="$PROJECT_DIR$/graphql/models_gen.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphql/mutation_resolver.go" beforeDir="false" afterPath="$PROJECT_DIR$/graphql/mutation_resolver.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphql/query_resolver.go" beforeDir="false" afterPath="$PROJECT_DIR$/graphql/query_resolver.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphql/schema.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/graphql/schema.graphql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/app.dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/order/app.dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/catalog.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/order/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/cmd/order/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/order/cmd/order/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/order/repository.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/order/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/order/service.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +52,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -31,31 +64,60 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "Go Build.go build github.com/mefourr/go-grpc-graphql-microservice/graphql.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "git-widget-placeholder": "dev",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "/Users/main/vscode-projects/course/go-grpc-graphql-microservice/order",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;Go Build.go build github.com/mefourr/go-grpc-graphql-microservice/catalog/test.executor&quot;: &quot;Run&quot;,
+    &quot;Go Build.go build github.com/mefourr/go-grpc-graphql-microservice/graphql.executor&quot;: &quot;Run&quot;,
+    &quot;Go Build.go build github.com/mefourr/go-grpc-graphql-microservice/order/test.executor&quot;: &quot;Run&quot;,
+    &quot;Go Build.go build scratch.go.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/main/vscode-projects/course/go-grpc-graphql-microservice/order&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;go&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/order" />
       <recent name="$PROJECT_DIR$/catalog" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/order" />
+      <recent name="$PROJECT_DIR$/catalog/test" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="GoApplicationRunConfiguration" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Go Build.go build github.com/mefourr/go-grpc-graphql-microservice/order/test">
+    <configuration name="go build github.com/mefourr/go-grpc-graphql-microservice/catalog/test" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go-grpc-graphql-microservice" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/mefourr/go-grpc-graphql-microservice/catalog/test" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/catalog/test/test.go" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build github.com/mefourr/go-grpc-graphql-microservice/graphql" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-grpc-graphql-microservice" />
       <working_directory value="$PROJECT_DIR$" />
@@ -65,8 +127,29 @@
       <filePath value="$PROJECT_DIR$/graphql/TEST.GO.go" />
       <method v="2" />
     </configuration>
+    <configuration name="go build github.com/mefourr/go-grpc-graphql-microservice/order/test" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go-grpc-graphql-microservice" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/mefourr/go-grpc-graphql-microservice/order/test" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/order/test/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build scratch.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go-grpc-graphql-microservice" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <package value="github.com/mefourr/go-grpc-graphql-microservice" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$APPLICATION_CONFIG_DIR$/scratches/scratch.go" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build github.com/mefourr/go-grpc-graphql-microservice/order/test" />
+        <item itemvalue="Go Build.go build scratch.go" />
+        <item itemvalue="Go Build.go build github.com/mefourr/go-grpc-graphql-microservice/catalog/test" />
         <item itemvalue="Go Build.go build github.com/mefourr/go-grpc-graphql-microservice/graphql" />
       </list>
     </recent_temporary>
@@ -85,7 +168,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="account services" />
-    <option name="LAST_COMMIT_MESSAGE" value="account services" />
+    <MESSAGE value="catalog service" />
+    <MESSAGE value="catalog protos" />
+    <option name="LAST_COMMIT_MESSAGE" value="catalog protos" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
